@@ -28,7 +28,7 @@
 export default {
   data () {
     return {
-      env: 'localhost:8080',
+      env: 'http://localhost:8080',
       isLocal: true
     }
   },
@@ -51,7 +51,7 @@ export default {
       if (this.isLocal) {
         this.env = 'https://www.prakerja.dev.karier.mu';
       } else {
-        this.env = 'localhost:8080';
+        this.env = 'http://localhost:8080';
       }
       this.isLocal = !this.isLocal;
     }
