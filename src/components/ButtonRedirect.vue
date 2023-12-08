@@ -45,7 +45,7 @@ export default {
       window.location.href = `${this.env}/prakerja-face-recognition-status?error=terjadi%20kesalahan&error_code=ERRFR0001&error_description=wajah%20tidak%20sesuai&state=OAUTHSTATECODE`;
     },
     redirectToKariermuErrorLimit() {
-      window.location.href = `${this.env}/prakerja-face-recognition-status?error=terjadi%20kesalahan&error_code=ERRLV0001&error_description=Kamu%20sudah%20pernah%20redeem%20pelatihan%20ini%20sebelumnya&state=OAUTHSTATECODE`;
+      window.location.href = 'https://prakerja.karier.mu/prakerja-face-recognition-status?state=STATE-E53YF0&error=Gagal%20Verifikasi&error_code=ERRFD001&error_description=Kamu%20Sudah%20Melewati%20Batas%20Percobaan%20Verifikasi%20Wajah';
     },
     handleChangeEnv() {
       if (this.isLocal) {
