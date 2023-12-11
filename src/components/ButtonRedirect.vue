@@ -17,6 +17,9 @@
       <button @click="redirectToKariermuErrorWrongFace" class="outline-error-button">
         Redirect to Prakerja Karier.mu (Staging ENV)
       </button>
+      <button @click="redirectToKariermuDevEnv" class="outline-error-button">
+        Redirect to Prakerja Karier.mu (Dev ENV)
+      </button>
       <button @click="redirectToKariermuErrorLimit" class="outline-error-button">
         Redirect to Prakerja Karier.mu (Error Limit 5 times)
       </button>
@@ -43,6 +46,9 @@ export default {
     },
     redirectToKariermuErrorWrongFace() {
       window.location.href = 'https://prakerja.staging.karier.mu/prakerja-face-recognition-status?state=STATE-E53YF0&error=Gagal%20Verifikasi&error_code=ERRFD001&error_description=Kamu%20Sudah%20Melewati%20Batas%20Percobaan%20Verifikasi%20Wajah';
+    },
+    redirectToKariermuDevEnv() {
+      window.location.href = 'https://prakerja.dev.karier.mu/prakerja-face-recognition-status?state=STATE-E53YF0&error=Gagal%20Verifikasi&error_code=ERRFD001&error_description=Kamu%20Sudah%20Melewati%20Batas%20Percobaan%20Verifikasi%20Wajah';
     },
     redirectToKariermuErrorLimit() {
       window.location.href = 'https://prakerja.karier.mu/prakerja-face-recognition-status?state=STATE-E53YF0&error=Gagal%20Verifikasi&error_code=ERRFD001&error_description=Kamu%20Sudah%20Melewati%20Batas%20Percobaan%20Verifikasi%20Wajah';
