@@ -12,7 +12,10 @@
     </div>
     <div class="button-wrapper">
       <button @click="redirectToKariermuSuccess" class="outline-primary-button">
-        Redirect to Prakerja Karier.mu (Success)
+        Redirect to Prakerja Karier.mu local (Success)
+      </button>
+      <button @click="redirectToKariermuError" class="outline-error-button">
+        Redirect to Prakerja Karier.mu local (error)
       </button>
       <button @click="redirectToKariermuErrorWrongFace" class="outline-error-button">
         Redirect to Prakerja Karier.mu (Staging ENV)
@@ -44,6 +47,9 @@ export default {
     redirectToKariermuSuccess() {
       window.location.href = `${this.env}/prakerja-face-recognition-status?state=OAUTHSTATECODE`;
     },
+    redirectToKariermuError() {
+      window.location.href = `${this.env}/prakerja-face-recognition-status?success=false&error=Gagal%20Verifikasi&error-code=ERRFD005&error-desc=Kamu%20memiliki%20sisa%204X%20kesempatan%20lagi.%20Pastikan%20kamu%20telah%20mengikuti%20panduan%20verifikasi.%20wajah%20dengan%20benar.%20Info%20panduan%20unggah%20wajah.&state=STATE-E53YF0&url_program_location=https%3A%2F%2Fprakerja.staging.karier.mu%2Faktivitas%2Faktivitas-teks-141`;
+    }, 
     redirectToKariermuErrorWrongFace() {
       window.location.href = 'https://prakerja.staging.karier.mu/prakerja-face-recognition-status?state=STATE-E53YF0&error=Gagal%20Verifikasi&error_code=ERRFD001&error_description=Kamu%20Sudah%20Melewati%20Batas%20Percobaan%20Verifikasi%20Wajah';
     },
